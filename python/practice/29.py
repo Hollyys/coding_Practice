@@ -2,7 +2,7 @@ def solution(enroll, referral, seller, amount):
     answer = []
     parent = {}
     total = {}
-    
+
     for i in range(len(enroll)):
         parent[enroll[i]] = referral[i]
 
@@ -21,3 +21,7 @@ def solution(enroll, referral, seller, amount):
         answer.append(total[name])
 
     return answer
+
+maps = ["SOOOL", "OOOOO", "OOOOO", "OOOOO", "OOOOE"]
+if not maps[-1][-1]:
+    print('helo')
