@@ -48,3 +48,5 @@ def solution(board):
         # printdis(distances)
     
     return distances[n-1][n-1]
+
+# 분석: 다익스트라는 이러한 경우에서는 오류가 발생한다
