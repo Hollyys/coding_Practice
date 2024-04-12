@@ -39,9 +39,9 @@ def solution(board):
         for num in range(1, 10):
             if is_valid(num, row, col):
                 board[row][col] = num
-            if find_solution():  # ❽ 다음 빈 칸으로 재귀적으로 탐색
-                return True
-            board[row][col] = 0  # ❾ 가능한 숫자가 없으면 원래의 0으로 되돌림
+                if find_solution():  # ❽ 다음 빈 칸으로 재귀적으로 탐색
+                    return True
+                board[row][col] = 0  # ❾ 가능한 숫자가 없으면 원래의 0으로 되돌림
         return False
 
     find_solution()
@@ -49,8 +49,12 @@ def solution(board):
 
 
 # TEST 코드 입니다. 주석을 풀고 실행시켜보세요
+def printt(table):
+    for column in table:
+        print(column)
+    print()
 
-print(solution(
+printt(solution(
 [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
     [6, 0, 0, 1, 9, 5, 0, 0, 0],
@@ -79,9 +83,7 @@ print(solution(
 ]
 '''
 
-
-
-print(solution(
+printt(solution(
 [
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
